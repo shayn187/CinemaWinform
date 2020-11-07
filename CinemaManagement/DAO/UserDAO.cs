@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using CinemaManagement.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,10 +16,11 @@ namespace CinemaManagement.DAO
         {
             this.conn = new DBConnection.DBConnection().conn;
         }
-        public bool Login(String Username, String Password)
+        public User Login(String Username, String Password)
         {
             using (conn)
             {
+                User user = null;
                 conn.Open();
                 string sql = "Select * from User where `Username` = @Username && `Password` = MD5(@Password)";
                 MySqlCommand command = new MySqlCommand(sql, conn);
@@ -29,13 +31,21 @@ namespace CinemaManagement.DAO
                 MySqlDataReader md = command.ExecuteReader();
                 if (md.Read())
                 {
+                    user = new User
+                    {
+                        Username = md["Username"].ToString(),
+                        Permission = Convert.ToInt32(md["Permission"]),
+                        id_U = Convert.ToInt32(md["id_U"])
+                    };
                     conn.Close();
-                    return true;
+
+                    return user;
+                    
                 }
                 else
                 {
                     conn.Close();
-                    return false;
+                    return user;
                 }
 
             }
