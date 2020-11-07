@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CinemaManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +45,14 @@ namespace CinemaManagement
             CenterControlInParent(pnlLogin);
         }
 
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        {
+            UserDAO uDao = new UserDAO();
+            uDao.Login(txtUsername.Text,txtPass.Text);
+            Theater t = new Theater();
+            this.Visible=false;
+            t.Visible=true;
+        }
     }
 
 }
