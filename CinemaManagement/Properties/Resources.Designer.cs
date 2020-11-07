@@ -73,26 +73,6 @@ namespace CinemaManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap back {
-            get {
-                object obj = ResourceManager.GetObject("back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap backIcon {
-            get {
-                object obj = ResourceManager.GetObject("backIcon", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap BackImg {
             get {
                 object obj = ResourceManager.GetObject("BackImg", resourceCulture);
@@ -106,6 +86,16 @@ namespace CinemaManagement.Properties {
         internal static System.Drawing.Bitmap bg_red {
             get {
                 object obj = ResourceManager.GetObject("bg-red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ContinuesImg {
+            get {
+                object obj = ResourceManager.GetObject("ContinuesImg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

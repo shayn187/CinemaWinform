@@ -18,7 +18,8 @@ namespace CinemaManagement
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form1());
             //Application.Run(new Theater());
-            Application.Run(new Room());
+            //Application.Run(new Room());
+            Application.Run(new ConfirmBill());
         }
     }
 }
