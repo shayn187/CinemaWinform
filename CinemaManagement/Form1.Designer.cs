@@ -29,90 +29,88 @@
         private void InitializeComponent()
         {
             this.pnlLogin = new System.Windows.Forms.Panel();
-            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
-            this.materialSingleLineTextField2 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextField1 = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnLogin = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.txtPass = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.txtUsername = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.pnlLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlLogin
             // 
-            this.pnlLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLogin.AutoSize = true;
             this.pnlLogin.BackColor = System.Drawing.Color.Snow;
             this.pnlLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pnlLogin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlLogin.Controls.Add(this.materialRaisedButton1);
-            this.pnlLogin.Controls.Add(this.materialSingleLineTextField2);
-            this.pnlLogin.Controls.Add(this.materialSingleLineTextField1);
-            this.pnlLogin.Controls.Add(this.label1);
+            this.pnlLogin.Controls.Add(this.btnLogin);
+            this.pnlLogin.Controls.Add(this.txtPass);
+            this.pnlLogin.Controls.Add(this.txtUsername);
+            this.pnlLogin.Controls.Add(this.lblLogin);
             this.pnlLogin.Location = new System.Drawing.Point(909, 420);
             this.pnlLogin.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLogin.Name = "pnlLogin";
-            this.pnlLogin.Size = new System.Drawing.Size(740, 476);
+            this.pnlLogin.Size = new System.Drawing.Size(757, 480);
             this.pnlLogin.TabIndex = 1;
             // 
-            // materialRaisedButton1
+            // btnLogin
             // 
-            this.materialRaisedButton1.BackColor = System.Drawing.Color.Wheat;
-            this.materialRaisedButton1.Depth = 0;
-            this.materialRaisedButton1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(172, 299);
-            this.materialRaisedButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialRaisedButton1.Name = "materialRaisedButton1";
-            this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(404, 48);
-            this.materialRaisedButton1.TabIndex = 4;
-            this.materialRaisedButton1.Text = "Login";
-            this.materialRaisedButton1.UseVisualStyleBackColor = false;
+            this.btnLogin.BackColor = System.Drawing.Color.Wheat;
+            this.btnLogin.Depth = 0;
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLogin.Location = new System.Drawing.Point(172, 299);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Primary = true;
+            this.btnLogin.Size = new System.Drawing.Size(404, 48);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
-            // materialSingleLineTextField2
+            // txtPass
             // 
-            this.materialSingleLineTextField2.Depth = 0;
-            this.materialSingleLineTextField2.Hint = "Password";
-            this.materialSingleLineTextField2.Location = new System.Drawing.Point(172, 210);
-            this.materialSingleLineTextField2.Margin = new System.Windows.Forms.Padding(4);
-            this.materialSingleLineTextField2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField2.Name = "materialSingleLineTextField2";
-            this.materialSingleLineTextField2.PasswordChar = '*';
-            this.materialSingleLineTextField2.SelectedText = "";
-            this.materialSingleLineTextField2.SelectionLength = 0;
-            this.materialSingleLineTextField2.SelectionStart = 0;
-            this.materialSingleLineTextField2.Size = new System.Drawing.Size(534, 28);
-            this.materialSingleLineTextField2.TabIndex = 2;
-            this.materialSingleLineTextField2.UseSystemPasswordChar = false;
+            this.txtPass.Depth = 0;
+            this.txtPass.Hint = "Password";
+            this.txtPass.Location = new System.Drawing.Point(172, 210);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPass.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.SelectedText = "";
+            this.txtPass.SelectionLength = 0;
+            this.txtPass.SelectionStart = 0;
+            this.txtPass.Size = new System.Drawing.Size(546, 28);
+            this.txtPass.TabIndex = 2;
+            this.txtPass.UseSystemPasswordChar = false;
             // 
-            // materialSingleLineTextField1
+            // txtUsername
             // 
-            this.materialSingleLineTextField1.Depth = 0;
-            this.materialSingleLineTextField1.Hint = "UserName";
-            this.materialSingleLineTextField1.Location = new System.Drawing.Point(172, 128);
-            this.materialSingleLineTextField1.Margin = new System.Windows.Forms.Padding(4);
-            this.materialSingleLineTextField1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextField1.Name = "materialSingleLineTextField1";
-            this.materialSingleLineTextField1.PasswordChar = '\0';
-            this.materialSingleLineTextField1.SelectedText = "";
-            this.materialSingleLineTextField1.SelectionLength = 0;
-            this.materialSingleLineTextField1.SelectionStart = 0;
-            this.materialSingleLineTextField1.Size = new System.Drawing.Size(534, 28);
-            this.materialSingleLineTextField1.TabIndex = 1;
-            this.materialSingleLineTextField1.UseSystemPasswordChar = false;
+            this.txtUsername.Depth = 0;
+            this.txtUsername.Hint = "UserName";
+            this.txtUsername.Location = new System.Drawing.Point(172, 128);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.MouseState = MaterialSkin.MouseState.HOVER;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.SelectionLength = 0;
+            this.txtUsername.SelectionStart = 0;
+            this.txtUsername.Size = new System.Drawing.Size(546, 28);
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.UseSystemPasswordChar = false;
             // 
-            // label1
+            // lblLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(300, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 52);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Login";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.Tomato;
+            this.lblLogin.Location = new System.Drawing.Point(300, 32);
+            this.lblLogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(134, 52);
+            this.lblLogin.TabIndex = 0;
+            this.lblLogin.Text = "Login";
             // 
             // Form1
             // 
@@ -135,10 +133,10 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlLogin;
-        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField2;
-        private MaterialSkin.Controls.MaterialSingleLineTextField materialSingleLineTextField1;
-        private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialRaisedButton btnLogin;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtPass;
+        private MaterialSkin.Controls.MaterialSingleLineTextField txtUsername;
+        private System.Windows.Forms.Label lblLogin;
     }
 }
 
