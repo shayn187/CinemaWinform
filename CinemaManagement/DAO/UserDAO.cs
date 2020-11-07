@@ -20,7 +20,7 @@ namespace CinemaManagement.DAO
             using (conn)
             {
                 conn.Open();
-                string sql = "Select * from User where `Username` = @Username && `Password` = MD5(@Password)";
+                string sql = "Select * from User where `Username` = '@Username' && `Password` = MD5(@Password)";
                 MySqlCommand command = new MySqlCommand(sql, conn);
 
                 command.Parameters.AddWithValue("@Username", Username);
