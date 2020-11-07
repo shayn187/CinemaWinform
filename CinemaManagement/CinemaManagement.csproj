@@ -145,6 +145,7 @@
     <EmbeddedResource Include="Theater.resx">
       <DependentUpon>Theater.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="App1.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +166,14 @@
   <ItemGroup>
     <None Include="Resources\bg-red.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backIcon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackImg.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
