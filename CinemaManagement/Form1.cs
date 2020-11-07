@@ -45,13 +45,10 @@ namespace CinemaManagement
             CenterControlInParent(pnlLogin);
         }
 
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            UserDAO uDao = new UserDAO();
-            uDao.Login(txtUsername.Text,txtPass.Text);
-            Theater t = new Theater();
-            this.Visible=false;
-            t.Visible=true;
+            Console.WriteLine("click");
+            new UserDAO().Login(txtUsername.Text, txtPass.Text);
         }
     }
 
