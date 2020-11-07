@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using CinemaManagement.Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,33 +16,39 @@ namespace CinemaManagement.DAO
         {
             this.conn = new DBConnection.DBConnection().conn;
         }
-        public bool Login(String Username, String Password)
+        public User Login(String Username, String Password)
         {
-            Console.WriteLine("Username: " + Username);
-            Console.WriteLine("Password: " + Password);
-            return true;
-            //using (conn)
-            //{
-            //    conn.Open();
-            //    string sql = "Select * from User where `Username` = @Username && `Password` = MD5(@Password)";
-            //    MySqlCommand command = new MySqlCommand(sql, conn);
+            using (conn)
+            {
+                User user = null;
+                conn.Open();
+                string sql = "Select * from User where `Username` = @Username && `Password` = MD5(@Password)";
+                MySqlCommand command = new MySqlCommand(sql, conn);
 
-            //    command.Parameters.AddWithValue("@Username", Username);
-            //    command.Parameters.AddWithValue("@Password", Password);
-            //    command.ExecuteNonQuery();
-            //    MySqlDataReader md = command.ExecuteReader();
-            //    if (md.Read())
-            //    {
-            //        conn.Close();
-            //        return true;
-            //    }
-            //    else
-            //    {
-            //        conn.Close();
-            //        return false;
-            //    }
+                command.Parameters.AddWithValue("@Username", Username);
+                command.Parameters.AddWithValue("@Password", Password);
+                command.ExecuteNonQuery();
+                MySqlDataReader md = command.ExecuteReader();
+                if (md.Read())
+                {
+                    user = new User
+                    {
+                        Username = md["Username"].ToString(),
+                        Permission = Convert.ToInt32(md["Permission"]),
+                        id_U = Convert.ToInt32(md["id_U"])
+                    };
+                    conn.Close();
 
-            //}
+                    return user;
+                    
+                }
+                else
+                {
+                    conn.Close();
+                    return user;
+                }
+
+            }
         }
     }
 }
