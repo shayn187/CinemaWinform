@@ -47,8 +47,11 @@ namespace CinemaManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("click");
-            new UserDAO().Login(txtUsername.Text, txtPass.Text);
+            Console.WriteLine(new UserDAO().Login(txtUsername.Text, txtPass.Text).Username);
+
+            this.Visible = false;
+            Theater theater = new Theater();
+            theater.Visible = true;
         }
     }
 
