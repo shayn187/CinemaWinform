@@ -17,28 +17,31 @@ namespace CinemaManagement.DAO
         }
         public bool Login(String Username, String Password)
         {
-            using (conn)
-            {
-                conn.Open();
-                string sql = "Select * from User where `Username` = @Username && `Password` = MD5(@Password)";
-                MySqlCommand command = new MySqlCommand(sql, conn);
+            Console.WriteLine("Username: " + Username);
+            Console.WriteLine("Password: " + Password);
+            return true;
+            //using (conn)
+            //{
+            //    conn.Open();
+            //    string sql = "Select * from User where `Username` = @Username && `Password` = MD5(@Password)";
+            //    MySqlCommand command = new MySqlCommand(sql, conn);
 
-                command.Parameters.AddWithValue("@Username", Username);
-                command.Parameters.AddWithValue("@Password", Password);
-                command.ExecuteNonQuery();
-                MySqlDataReader md = command.ExecuteReader();
-                if (md.Read())
-                {
-                    conn.Close();
-                    return true;
-                }
-                else
-                {
-                    conn.Close();
-                    return false;
-                }
+            //    command.Parameters.AddWithValue("@Username", Username);
+            //    command.Parameters.AddWithValue("@Password", Password);
+            //    command.ExecuteNonQuery();
+            //    MySqlDataReader md = command.ExecuteReader();
+            //    if (md.Read())
+            //    {
+            //        conn.Close();
+            //        return true;
+            //    }
+            //    else
+            //    {
+            //        conn.Close();
+            //        return false;
+            //    }
 
-            }
+            //}
         }
     }
 }
