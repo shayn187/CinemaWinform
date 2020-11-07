@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,6 +37,7 @@ namespace CinemaManagement
             this.WindowState = FormWindowState.Maximized;
 
         }
+
         private void CenterControlInParent(Control ctrlToCenter)
         {
             ctrlToCenter.Left = (ctrlToCenter.Parent.Width - ctrlToCenter.Width) / 2;
@@ -47,11 +50,16 @@ namespace CinemaManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Console.WriteLine(new UserDAO().Login(txtUsername.Text, txtPass.Text).Username);
+            if (new UserDAO().Login(txtUsername.Text, txtPass.Text) != null) {
+                this.Visible = false;
+                Theater theater = new Theater();
+                theater.Visible = true;
 
-            this.Visible = false;
-            Theater theater = new Theater();
-            theater.Visible = true;
+                //Thread.Sleep(10000);
+
+                //this.Visible = true;
+                //theater.Visible = false;
+            };
         }
     }
 
