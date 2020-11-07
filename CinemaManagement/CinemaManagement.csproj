@@ -103,6 +103,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfirmBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmBill.Designer.cs">
+      <DependentUpon>ConfirmBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\UserDAO.cs" />
     <Compile Include="DBConnection\DBConnection.cs" />
     <Compile Include="Form1.cs">
@@ -114,6 +120,11 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Room.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,19 +137,17 @@
     <Compile Include="Theater.Designer.cs">
       <DependentUpon>Theater.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConfirmBill.resx">
+      <DependentUpon>ConfirmBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Room.resx">
       <DependentUpon>Room.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,13 +176,8 @@
     <None Include="Resources\bg-red.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backIcon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BackImg.jpg" />
+    <Content Include="Resources\BackImg.jpg" />
+    <Content Include="Resources\ContinuesImg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
